@@ -1,3 +1,7 @@
+#linters
+.eslintrc.json
+.babelrc
+
 # dependencies
 /node_modules
 /.pnp
