@@ -1,21 +1,30 @@
-import React from 'react';
-import PropTypes from 'prop-types';
+import React, { useEffect } from 'react';
 import { Link, Outlet } from 'react-router-dom';
+import { useDispatch, useSelector } from 'react-redux';
+
+import { retrieveRevenues } from '../redux/revenues/revenues';
 
 import Navbar from './Navbar';
 
-const YearsList = ({ yearList }) => (
-  <>
-    <Navbar homeButton="Home" header="Mesmerising Metrics" />
+const YearsList = () => {
+  const dispatch = useDispatch();
+  const yearList = useSelector((state) => state.revenuesReducer);
 
-    <ul className="years-list">
-      {yearList.map((year) => {
-        const date = Object.keys(year)[0];
-        const yearNumber = date.split('-')[0];
-        const revenues = year[date][Object.keys(year[date])].Geographical;
+  useEffect(() => {
+    dispatch(retrieveRevenues());
+  }, []);
 
-        return (
-          <>
+  return (
+    <>
+      <Navbar homeButton="Home" header="Mesmerising Metrics" />
+
+      <ul className="years-list">
+        {yearList.map((year) => {
+          const date = Object.keys(year)[0];
+          const yearNumber = date.split('-')[0];
+          const revenues = year[date];
+
+          return (
             <li key={yearNumber}>
               <Link to={date}>
                 <small className="year">{yearNumber}</small>
@@ -24,13 +33,13 @@ const YearsList = ({ yearList }) => (
                 </small>
               </Link>
             </li>
-          </>
-        );
-      })}
-    </ul>
+          );
+        })}
+      </ul>
 
-    <Outlet />
-  </>
-);
+      <Outlet />
+    </>
+  );
+};
 
 export default YearsList;
