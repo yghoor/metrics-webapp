@@ -1,17 +1,17 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import { useParams } from 'react-router-dom';
+import { useSelector } from 'react-redux';
 
 import Navbar from './Navbar';
 
-const YearInfo = ({ yearList }) => {
+const YearInfo = () => {
+  const yearList = useSelector((state) => state.revenuesReducer);
+
   const { slug } = useParams();
   const currentDate = slug;
   const currentYearInfo = yearList.find((year) => Object.keys(year)[0] === slug);
   const currentYear = currentDate.split('-')[0];
-  const currentRevenues = currentYearInfo[currentDate][
-    Object.keys(currentYearInfo[currentDate])].Geographical;
-
+  const currentRevenues = currentYearInfo[currentDate];
   const areas = Object.keys(currentRevenues);
   const revenues = Object.values(currentRevenues);
 
