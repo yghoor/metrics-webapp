@@ -31,8 +31,3 @@ const YearInfo = ({ yearList }) => {
 };
 
 export default YearInfo;
-
-YearInfo.propTypes = {
-  // eslint-disable-next-line react/forbid-prop-types
-  yearList: PropTypes.arrayOf(PropTypes.object).isRequired,
-};
