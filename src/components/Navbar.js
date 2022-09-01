@@ -24,8 +24,8 @@ const Navbar = ({ homeButton, header, filter }) => {
       {filter
         ? (
           <select placeholder="Filter" onChange={onChange}>
-            <option value="revenueDesc">Revenue (descending)</option>
-            <option value="revenueAsc">Revenue (ascending)</option>
+            <option value="revenueDesc">Total Revenue(descending)</option>
+            <option value="revenueAsc">Total Revenue(ascending)</option>
           </select>
         )
         : null}
