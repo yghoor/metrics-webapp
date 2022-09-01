@@ -8,9 +8,10 @@ const Navbar = ({ homeButton, header }) => (
 
     <h2>{header}</h2>
 
-    <button type="button">&#9881;</button>
-  </nav>
-);
+          <select placeholder="Filter" onChange={onChange}>
+            <option value="revenueDesc">Revenue (descending)</option>
+            <option value="revenueAsc">Revenue (ascending)</option>
+          </select>
 
 export default Navbar;
 
