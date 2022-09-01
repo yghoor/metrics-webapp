@@ -1,5 +1,6 @@
 const RETRIEVE_REVENUES = 'metrics-webapp/revenues/RETRIEVE_REVENUES';
 const DO_NOT_RETRIEVE = 'metrics-webapp/revenues/DO_NOT_RETRIEVE';
+const FILTER_LIST = 'metrics-webapp/revenues/FILTER_LIST';
 
 const initialState = [];
 
@@ -36,3 +37,8 @@ export const retrieveRevenues = () => async (dispatch) => {
     });
   }
 };
+
+export const returnFiltered = (payload) => ({
+  type: FILTER_LIST,
+  payload,
+});
