@@ -15,16 +15,28 @@ const Navbar = ({ homeButton, header, filter }) => {
     dispatch(returnFiltered(filteredList));
   };
 
-    <h2>{header}</h2>
+  return (
+    <nav>
+      <Link to="/">{homeButton}</Link>
 
+      <h2>{header}</h2>
+
+      {filter
+        ? (
           <select placeholder="Filter" onChange={onChange}>
             <option value="revenueDesc">Revenue (descending)</option>
             <option value="revenueAsc">Revenue (ascending)</option>
           </select>
+        )
+        : null}
+    </nav>
+  );
+};
 
 export default Navbar;
 
 Navbar.propTypes = {
   homeButton: PropTypes.string.isRequired,
   header: PropTypes.string.isRequired,
+  filter: PropTypes.bool.isRequired,
 };
