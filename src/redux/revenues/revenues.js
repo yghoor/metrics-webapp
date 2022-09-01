@@ -10,6 +10,8 @@ const reducer = (state = initialState, action) => {
       return [...state, ...action.payload];
     case DO_NOT_RETRIEVE:
       return state;
+    case FILTER_LIST:
+      return Object.assign([], state, action.payload);
     default:
       return state;
   }
