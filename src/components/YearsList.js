@@ -16,7 +16,7 @@ const YearsList = () => {
 
   return (
     <>
-      <Navbar homeButton="Home" header="Mesmerising Metrics" />
+      <Navbar homeButton="Home" header="Mesmerising Metrics" filter />
 
       <ul className="years-list">
         {yearList.map((year) => {

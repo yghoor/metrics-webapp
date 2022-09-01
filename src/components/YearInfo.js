@@ -17,7 +17,7 @@ const YearInfo = () => {
 
   return (
     <>
-      <Navbar homeButton="&#65308; Home" header={currentYear} />
+      <Navbar homeButton="&#65308; Home" header={currentYear} filter={false} />
 
       <div className="year-info">
         <ul className="revenue-list">
