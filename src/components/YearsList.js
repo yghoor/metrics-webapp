@@ -27,10 +27,10 @@ const YearsList = () => {
           return (
             <li key={yearNumber}>
               <Link to={date}>
-                <small className="year">{yearNumber}</small>
-                <small className="total-revenue">
+                <div className="year">{yearNumber}</div>
+                <div className="total-revenue">
                   {`Total: ${Object.values(revenues).reduce((a, b) => a + b)}`}
-                </small>
+                </div>
               </Link>
             </li>
           );
