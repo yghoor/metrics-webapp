@@ -6,6 +6,8 @@ import { retrieveRevenues } from '../redux/revenues/revenues';
 
 import Navbar from './Navbar';
 
+import '../styles/YearsList.css';
+
 const YearsList = () => {
   const dispatch = useDispatch();
   const yearList = useSelector((state) => state.revenuesReducer);
@@ -38,7 +40,7 @@ const YearsList = () => {
       </ul>
 
       <Outlet />
-    </>
+    </section>
   );
 };
 
