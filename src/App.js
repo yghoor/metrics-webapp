@@ -4,6 +4,8 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import YearsList from './components/YearsList';
 import YearInfo from './components/YearInfo';
 
+import './App.css';
+
 const App = () => (
   <>
     <Router>
