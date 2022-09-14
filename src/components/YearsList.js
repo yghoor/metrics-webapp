@@ -15,7 +15,7 @@ const YearsList = () => {
   }, []);
 
   return (
-    <>
+    <section className="years-list-page">
       <Navbar homeButton="Home" header="Mesmerising Metrics" filter />
 
       <ul className="years-list">

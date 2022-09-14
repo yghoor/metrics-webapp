@@ -16,7 +16,7 @@ const YearInfo = () => {
   const revenues = Object.values(currentRevenues);
 
   return (
-    <>
+    <section className="year-info-page">
       <Navbar homeButton="&#65308; Home" header={currentYear} filter={false} />
 
       <div className="year-info">
