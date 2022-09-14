@@ -4,6 +4,8 @@ import { useSelector } from 'react-redux';
 
 import Navbar from './Navbar';
 
+import '../styles/YearInfo.css';
+
 const YearInfo = () => {
   const yearList = useSelector((state) => state.revenuesReducer);
 
@@ -26,7 +28,7 @@ const YearInfo = () => {
           ))}
         </ul>
       </div>
-    </>
+    </section>
   );
 };
 
