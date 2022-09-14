@@ -6,6 +6,8 @@ import { useDispatch, useSelector } from 'react-redux';
 import filterList from '../logic/filterList';
 import { returnFiltered } from '../redux/revenues/revenues';
 
+import '../styles/Navbar.css';
+
 const Navbar = ({ homeButton, header, filter }) => {
   const dispatch = useDispatch();
   const yearList = useSelector((state) => state.revenuesReducer);
