@@ -1,0 +1,41 @@
+nav {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: center;
+  padding-top: 16px;
+  gap: 16px;
+}
+
+nav a {
+  font-size: 20px;
+}
+
+nav h2 {
+  color: #ff0;
+  margin: 0;
+  padding: 0;
+}
+
+nav select {
+  width: 75%;
+  padding: 6px;
+  font-size: large;
+  color: rgb(78, 78, 78);
+  border-radius: 4px;
+  transition: 0.15s ease-in-out;
+}
+
+nav select:focus {
+  outline: none;
+}
+
+nav select:hover,
+nav select:active {
+  cursor: pointer;
+  border: solid 3px #ff0;
+}
+
+nav select:invalid { 
+  color: gray;
+}
